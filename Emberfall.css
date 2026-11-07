@@ -155,3 +155,82 @@ a:hover {
   color: #fff0bd !important;
   text-shadow: 0 0 10px #ff6b24 !important;
 }
+
+/* =====================================
+   EMBERFALL KINGDOM
+   THE WILDFIRE SAVANNAH
+   ===================================== */
+
+/* Dramatic wildfire sky */
+body {
+  background-color: #100909 !important;
+  background-image:
+    radial-gradient(ellipse at 50% 78%,
+      rgba(255, 91, 24, .48) 0%,
+      transparent 35%),
+    radial-gradient(ellipse at 15% 35%,
+      rgba(130, 35, 24, .65) 0%,
+      transparent 40%),
+    radial-gradient(ellipse at 85% 30%,
+      rgba(180, 65, 20, .45) 0%,
+      transparent 40%),
+    linear-gradient(
+      180deg,
+      #160b12 0%,
+      #542018 35%,
+      #a4421d 65%,
+      #21100c 100%
+    ) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+/* Dark forest silhouettes */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .85;
+
+  background-image:
+    /* Tree canopies */
+    radial-gradient(ellipse at 4% 48%, #100b09 0 9%, transparent 10%),
+    radial-gradient(ellipse at 12% 38%, #160d0b 0 8%, transparent 9%),
+    radial-gradient(ellipse at 96% 42%, #100b09 0 10%, transparent 11%),
+    radial-gradient(ellipse at 88% 34%, #160d0b 0 8%, transparent 9%),
+
+    /* Tree trunks */
+    linear-gradient(85deg, transparent 0 7%, #100b09 7.5% 9%, transparent 9.5%),
+    linear-gradient(95deg, transparent 0 91%, #100b09 91.5% 94%, transparent 94.5%),
+
+    /* Forest floor */
+    linear-gradient(0deg, #100908 0%, transparent 28%);
+
+  background-repeat: no-repeat;
+}
+
+/* Floating embers and wildlife decorations */
+body::after {
+  content: "✦　🦌　✧　🦁　✦　🦌　✧";
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffb34d;
+  font-size: 23px;
+  letter-spacing: 8px;
+  opacity: .8;
+  pointer-events: none;
+  z-index: 0;
+  text-shadow: 0 0 12px #ff5b18;
+}
+
+/* Fiery glow around the kingdom */
+.container.main {
+  box-shadow:
+    0 0 20px rgba(255, 95, 25, .2),
+    0 0 55px rgba(150, 35, 20, .3) !important;
+}
