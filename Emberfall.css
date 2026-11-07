@@ -42,53 +42,6 @@ body {
   background-size: cover !important;
 }
 
-/* ===== ACACIA TREE SILHOUETTES ===== */
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-
-  background-image:
-    /* Left tree canopy */
-    radial-gradient(ellipse at 3% 25%,
-      #100807 0 7%, transparent 7.5%),
-    radial-gradient(ellipse at 10% 21%,
-      #100807 0 5%, transparent 5.5%),
-    radial-gradient(ellipse at 15% 27%,
-      #100807 0 6%, transparent 6.5%),
-
-    /* Right tree canopy */
-    radial-gradient(ellipse at 87% 23%,
-      #100807 0 6%, transparent 6.5%),
-    radial-gradient(ellipse at 94% 20%,
-      #100807 0 7%, transparent 7.5%),
-    radial-gradient(ellipse at 99% 27%,
-      #100807 0 6%, transparent 6.5%),
-
-    /* Tree trunks */
-    linear-gradient(85deg,
-      transparent 0 5%,
-      #100807 5.5% 7%,
-      transparent 7.5%),
-    linear-gradient(95deg,
-      transparent 0 92%,
-      #100807 92.5% 94%,
-      transparent 94.5%),
-
-    /* Dark ground */
-    linear-gradient(
-      0deg,
-      #100807 0%,
-      transparent 19%
-    );
-
-  background-repeat: no-repeat;
-}
-
-
 /* ===== WILDFIRE EMBERS ===== */
 
 body::after {
