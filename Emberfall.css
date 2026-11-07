@@ -88,24 +88,73 @@ body::before {
   background-repeat: no-repeat;
 }
 
-/* ===== GLOWING EMBERS ===== */
+
+/* ===== WILDFIRE EMBERS ===== */
 
 body::after {
-  content: "✦  ·  🦁  ·  🦌  ·  🐘  ·  ✦";
+  content: "";
   position: fixed;
-  bottom: 15px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: 8px;
-  color: #ffc45d;
-  text-shadow:
-    0 0 8px #ff6b18,
-    0 0 18px #ff3300;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
+
+  background-image:
+    radial-gradient(circle, #ffd875 1px, transparent 3px),
+    radial-gradient(circle, #ff7b24 2px, transparent 4px),
+    radial-gradient(circle, #ffad38 1px, transparent 3px),
+    radial-gradient(circle, #e94716 2px, transparent 4px);
+
+  background-size:
+    113px 137px,
+    179px 193px,
+    223px 167px,
+    257px 211px;
+
+  background-position:
+    15px 25px,
+    75px 95px,
+    125px 55px,
+    35px 145px;
+
+  opacity: .65;
 }
+
+/* ===== INTENSE FIRE GLOW ===== */
+
+body {
+  background-color: #100707 !important;
+
+  background-image:
+    radial-gradient(
+      ellipse at 50% 100%,
+      #ffcc57 0%,
+      #ff741e 12%,
+      rgba(190, 40, 15, .8) 30%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at 10% 85%,
+      rgba(255, 75, 15, .8),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 90% 85%,
+      rgba(255, 75, 15, .8),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #0c070b 0%,
+      #351014 25%,
+      #852719 55%,
+      #d34a1b 80%,
+      #ff8a26 100%
+    ) !important;
+
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
 
 /* ===== NAVIGATION ===== */
 
