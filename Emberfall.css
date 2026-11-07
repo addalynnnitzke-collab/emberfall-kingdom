@@ -611,6 +611,7 @@ a:hover {
       drop-shadow(0 0 15px #e75b22);
   }
 }
+
 /* ===== EMBERFALL NOTIFICATIONS ===== */
 
 .alert {
@@ -622,10 +623,13 @@ a:hover {
   box-shadow: 0 0 10px rgba(255, 125, 35, .15) !important;
 }
 
+/* SUCCESS: BURNT AMBER */
+
 .alert-success {
-  background: #202d19 !important;
-  color: #e5dca5 !important;
-  border-color: #a18b43 !important;
+  background: #49240f !important;
+  background-color: #49240f !important;
+  color: #ffe2b0 !important;
+  border-color: #d68a35 !important;
 }
 
 .alert-info {
