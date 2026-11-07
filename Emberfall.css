@@ -1,7 +1,7 @@
 
 /* ==========================================
    EMBERFALL KINGDOM
-   BURNING SKIES
+   INFERNO UI EDITION
    ========================================== */
 
 /* ===== MAIN BACKGROUND ===== */
@@ -12,7 +12,6 @@ body {
   font-family: Georgia, serif !important;
 
   background-image:
-    /* Deep black upper sky */
     linear-gradient(
       180deg,
       #090508 0%,
@@ -22,8 +21,6 @@ body {
       #f15a18 88%,
       #ff9b32 100%
     ),
-
-    /* Bright fire glow */
     radial-gradient(
       ellipse at 50% 90%,
       #ffdc68 0%,
@@ -35,7 +32,7 @@ body {
   background-size: cover !important;
 }
 
-/* ===== MOVING SMOKE FORMATIONS ===== */
+/* ===== SMOKE FORMATIONS ===== */
 
 body::before {
   content: "";
@@ -46,71 +43,23 @@ body::before {
   z-index: 0;
 
   background-image:
-
-    /* Large uneven smoke banks */
-    radial-gradient(
-      ellipse 20% 18% at 3% 25%,
-      #080507 0 48%,
-      transparent 75%
-    ),
-
-    radial-gradient(
-      ellipse 24% 22% at 17% 18%,
-      #0b0609 0 48%,
-      transparent 76%
-    ),
-
-    radial-gradient(
-      ellipse 18% 16% at 34% 27%,
-      #100609 0 48%,
-      transparent 76%
-    ),
-
-    radial-gradient(
-      ellipse 26% 20% at 55% 16%,
-      #080507 0 48%,
-      transparent 76%
-    ),
-
-    radial-gradient(
-      ellipse 21% 19% at 76% 24%,
-      #0c0609 0 48%,
-      transparent 76%
-    ),
-
-    radial-gradient(
-      ellipse 25% 21% at 98% 17%,
-      #080507 0 48%,
-      transparent 76%
-    ),
-
-    /* Lower rolling smoke */
-    radial-gradient(
-      ellipse 30% 17% at 9% 57%,
-      #19090d 0 45%,
-      transparent 78%
-    ),
-
-    radial-gradient(
-      ellipse 34% 19% at 42% 52%,
-      #260d12 0 45%,
-      transparent 78%
-    ),
-
-    radial-gradient(
-      ellipse 30% 18% at 83% 58%,
-      #19090d 0 45%,
-      transparent 78%
-    );
+    radial-gradient(ellipse 20% 18% at 3% 25%, #080507 0 48%, transparent 75%),
+    radial-gradient(ellipse 24% 22% at 17% 18%, #0b0609 0 48%, transparent 76%),
+    radial-gradient(ellipse 18% 16% at 34% 27%, #100609 0 48%, transparent 76%),
+    radial-gradient(ellipse 26% 20% at 55% 16%, #080507 0 48%, transparent 76%),
+    radial-gradient(ellipse 21% 19% at 76% 24%, #0c0609 0 48%, transparent 76%),
+    radial-gradient(ellipse 25% 21% at 98% 17%, #080507 0 48%, transparent 76%),
+    radial-gradient(ellipse 30% 17% at 9% 57%, #19090d 0 45%, transparent 78%),
+    radial-gradient(ellipse 34% 19% at 42% 52%, #260d12 0 45%, transparent 78%),
+    radial-gradient(ellipse 30% 18% at 83% 58%, #19090d 0 45%, transparent 78%);
 
   background-repeat: no-repeat;
   filter: blur(7px);
   opacity: .95;
-
   animation: smokeDrift 18s ease-in-out infinite alternate;
 }
 
-/* ===== FLOATING FIRE EMBERS ===== */
+/* ===== FLOATING EMBERS ===== */
 
 body::after {
   content: "";
@@ -144,7 +93,7 @@ body::after {
   animation: emberFlicker 3s ease-in-out infinite alternate;
 }
 
-/* ===== SMOKE MOVEMENT ===== */
+/* ===== ANIMATIONS ===== */
 
 @keyframes smokeDrift {
   0% {
@@ -162,25 +111,33 @@ body::after {
   }
 }
 
-/* ===== EMBER FLICKER ===== */
-
 @keyframes emberFlicker {
-  0% {
-    opacity: .45;
-  }
-
-  100% {
-    opacity: .85;
-  }
+  0% { opacity: .45; }
+  100% { opacity: .85; }
 }
 
-/* ===== KEEP CONTENT ABOVE BACKGROUND ===== */
+/* ===== MAIN CONTENT LAYERS ===== */
 
 .container,
 .container.main,
 .main {
   position: relative;
   z-index: 1;
+}
+
+.container.main,
+.main {
+  background: #190e0e !important;
+  color: #f5d7a0 !important;
+
+  box-shadow:
+    0 0 20px rgba(255, 95, 25, .2),
+    0 0 55px rgba(150, 35, 20, .3) !important;
+}
+
+.col-md-9 {
+  background: #241313 !important;
+  color: #f5d7a0 !important;
 }
 
 /* ===== NAVIGATION ===== */
@@ -195,7 +152,6 @@ body::after {
 
   border-bottom: 3px solid #d18b36 !important;
   color: #ffe0a1 !important;
-
   box-shadow: 0 4px 18px #e05b2444 !important;
 }
 
@@ -208,6 +164,15 @@ body::after {
   ) !important;
 
   border: 1px solid #d18b36 !important;
+}
+
+.navbar li a {
+  color: #ffe0a1 !important;
+}
+
+.navbar li a:hover {
+  color: #ffffff !important;
+  background: #87351e !important;
 }
 
 /* ===== HEADINGS ===== */
@@ -236,25 +201,7 @@ body::after {
   color: #ffe1a0 !important;
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
-
   text-shadow: 0 0 7px #ff8c32 !important;
-}
-
-/* ===== MAIN CONTENT ===== */
-
-.container.main,
-.main {
-  background: #190e0e !important;
-  color: #f5d7a0 !important;
-
-  box-shadow:
-    0 0 20px rgba(255, 95, 25, .2),
-    0 0 55px rgba(150, 35, 20, .3) !important;
-}
-
-.col-md-9 {
-  background: #241313 !important;
-  color: #f5d7a0 !important;
 }
 
 /* ===== BREADCRUMBS ===== */
@@ -270,15 +217,31 @@ body::after {
   color: #ffe0a0 !important;
 }
 
-/* ===== PANELS ===== */
+/* ===== SIDEBAR AND PANELS ===== */
+
+.sidebar {
+  background: #190e0e !important;
+  color: #ffe0a0 !important;
+}
 
 .panel {
   background: #281313 !important;
   border: 1px solid #bd7738 !important;
-  color: #f5d7a0 !important;
+  color: #ffe0a0 !important;
 }
 
-/* ===== LION TABLES ===== */
+.panel-heading {
+  background: #63251c !important;
+  color: #ffe0a0 !important;
+  border-color: #bd7738 !important;
+}
+
+.panel-body {
+  background: #281313 !important;
+  color: #ffe0a0 !important;
+}
+
+/* ===== KING PROFILE AND LION TABLES ===== */
 
 .table .top {
   background: linear-gradient(
@@ -317,11 +280,181 @@ td.right {
   color: #ffe2a5 !important;
 }
 
-/* ===== TEXT ===== */
+/* ===== CAVE AND BEETLE ICON BOXES ===== */
 
+.cave-grid,
+.beetle-grid {
+  background: #321817 !important;
+  border: 1px solid #bd7738 !important;
+  color: #ffe0a0 !important;
+}
+
+.cave-grid a,
+.beetle-grid a {
+  color: #ffd27b !important;
+}
+
+.cave-grid:hover,
+.beetle-grid:hover {
+  background: #54231b !important;
+  border-color: #f0ae4e !important;
+}
+
+/* ===== CHATBOX OUTER BACKGROUND ===== */
+
+#fra_chatContainer,
+#chat,
+#chatbox,
+#chatMessageContainer,
+#chatMessageList,
+.s-chat-sidebar {
+  background: #1b0d0e !important;
+  color: #f5d7a0 !important;
+  border-color: #a96736 !important;
+}
+
+/* ===== CHAT MESSAGES ===== */
+
+.s-chat-message:nth-child(odd) {
+  background: #321817 !important;
+  color: #ffe2b0 !important;
+  border: 1px solid #63301e !important;
+}
+
+.s-chat-message:nth-child(even) {
+  background: #241112 !important;
+  color: #ffe2b0 !important;
+  border: 1px solid #63301e !important;
+}
+
+.s-chat-message__pinned,
+#chatMessagePinned {
+  background: #71351f !important;
+  color: #fff0c2 !important;
+  border: 1px solid #d69b48 !important;
+}
+
+/* Chat timestamps */
+
+.s-chat-message_timestamp {
+  color: #d8a66b !important;
+}
+
+/* Chat message links */
+
+.s-chat-message a {
+  color: #ffbd63 !important;
+}
+
+.s-chat-message a:hover {
+  color: #fff0bd !important;
+}
+
+/* Chat message names and text */
+
+.s-chat-message,
+.s-chat-message p,
+.s-chat-message span {
+  color: #ffe2b0 !important;
+}
+
+/* Giveaway claims */
+
+.s-chat-message_claim {
+  background: #492016 !important;
+  color: #ffe7b7 !important;
+  border-bottom: 1px solid #bd7738 !important;
+}
+
+/* ===== CHAT CHANNEL BUTTONS ===== */
+
+button#label_currentChannel {
+  background: #71351f !important;
+  color: #ffe2a5 !important;
+  border: 1px solid #d69b48 !important;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher {
+  background: #281313 !important;
+  color: #ffe2a5 !important;
+  border: 1px solid #9c6033 !important;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher:hover,
+#fra_chatContainer .channelMenu .channelSwitcher.active {
+  background: #87351e !important;
+  color: #fff0bd !important;
+}
+
+/* Chat channel dropdown */
+
+.s-chat-sidebar #fraChatChannelMenu {
+  background: #241112 !important;
+  border: 1px solid #bd7738 !important;
+  color: #ffe2a5 !important;
+}
+
+/* ===== BUTTONS AND SMALL ICON CONTROLS ===== */
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"],
+select {
+  background-color: #71351f !important;
+  color: #ffe2a5 !important;
+  border: 1px solid #d69b48 !important;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: #98401f !important;
+  color: #fff4d4 !important;
+  border-color: #ffd27b !important;
+}
+
+/* Chat controls: dropdown, settings, refresh */
+
+#fra_chatContainer button,
+#fra_chatContainer select {
+  background: #3b1b16 !important;
+  color: #ffe2a5 !important;
+  border: 1px solid #a96736 !important;
+}
+
+/* ===== INPUTS AND COMMENT BOXES ===== */
+
+input,
+textarea,
+select {
+  background: #241313 !important;
+  color: #ffe2b0 !important;
+  border: 1px solid #a96736 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #d6ad7a !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #e7a64c !important;
+  box-shadow: 0 0 6px #e7a64c !important;
+}
+
+/* ===== GENERAL TEXT ===== */
+
+.main,
 .main p,
 .main td,
-.main th {
+.main th,
+.sidebar,
+.panel,
+.panel-body {
   color: #f5d7a0 !important;
 }
 
@@ -335,7 +468,6 @@ a:visited {
 
 a:hover {
   color: #fff0bd !important;
-
   text-shadow:
     0 0 8px #ff6b24,
     0 0 15px #ff9d3d !important;
