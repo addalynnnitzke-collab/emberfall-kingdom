@@ -72,10 +72,86 @@ body, p, td {
   background: #a33b25;
   color: #fff0c2;
 }
-body {
-  background: #160509 !important;
+
+/* ===== EMBERFALL: DARK ROYAL INTERIOR ===== */
+
+/* Main page */
+.container.main,
+.main {
+  background: #190e0e !important;
+  color: #f5d7a0 !important;
 }
 
-a {
-  color: #ff4500 !important;
+/* Main content area */
+.col-md-9 {
+  background: #241313 !important;
+  color: #f5d7a0 !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: linear-gradient(90deg, #351511, #65271b) !important;
+  border: 1px solid #c58b4f !important;
+  color: #ffe0a0 !important;
+}
+
+/* General panels */
+.panel {
+  background: #281313 !important;
+  border: 1px solid #bd7738 !important;
+  color: #f5d7a0 !important;
+}
+
+/* Table headers */
+.table .top {
+  background: linear-gradient(90deg, #391511, #8a351d) !important;
+  color: #ffdc91 !important;
+  border-bottom: 2px solid #d69b48 !important;
+}
+
+/* Table bottom bars */
+.table .bottom {
+  background: #71351f !important;
+  color: #ffe0a0 !important;
+}
+
+/* Lion information boxes */
+.inner-table {
+  background: #321817 !important;
+  color: #ffe0a0 !important;
+}
+
+.inner-table .right {
+  background: #784025 !important;
+  color: #ffe2a5 !important;
+}
+
+.inner-table .left {
+  background: #3b1d19 !important;
+  color: #ffe2a5 !important;
+}
+
+/* Main stat table */
+tr.right,
+td.right {
+  background-color: #3b1d19 !important;
+  color: #ffe2a5 !important;
+}
+
+/* Text readability */
+.main p,
+.main td,
+.main th {
+  color: #f5d7a0 !important;
+}
+
+/* Golden links */
+a:link,
+a:visited {
+  color: #f3bd64 !important;
+}
+
+a:hover {
+  color: #fff0bd !important;
+  text-shadow: 0 0 10px #ff6b24 !important;
 }
