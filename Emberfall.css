@@ -611,3 +611,45 @@ a:hover {
       drop-shadow(0 0 15px #e75b22);
   }
 }
+/* ===== EMBERFALL NOTIFICATIONS ===== */
+
+.alert {
+  background: #281313 !important;
+  background-color: #281313 !important;
+  color: #ffe2b0 !important;
+  border: 1px solid #bd7738 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 10px rgba(255, 125, 35, .15) !important;
+}
+
+.alert-success {
+  background: #202d19 !important;
+  color: #e5dca5 !important;
+  border-color: #a18b43 !important;
+}
+
+.alert-info {
+  background: #241b25 !important;
+  color: #e8c4d5 !important;
+  border-color: #a64b70 !important;
+}
+
+.alert-warning {
+  background: #492016 !important;
+  color: #ffe2a5 !important;
+  border-color: #d69b48 !important;
+}
+
+.alert-danger {
+  background: #471619 !important;
+  color: #ffe0d0 !important;
+  border-color: #c54b36 !important;
+}
+
+.alert a {
+  color: #ffbd63 !important;
+}
+
+.alert strong {
+  color: #ffd27b !important;
+}
