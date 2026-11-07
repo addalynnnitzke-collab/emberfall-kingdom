@@ -1,121 +1,226 @@
 
-/* =================================
+/* ==========================================
    EMBERFALL KINGDOM
-   THE REALM OF THE BURNING SUN
-   ================================= */
+   THE BURNING SAVANNAH
+   ========================================== */
+
+/* ===== MAIN BACKGROUND ===== */
 
 body {
-  background:
-    radial-gradient(ellipse at top, #762d20 0%, transparent 48%),
-    linear-gradient(145deg, #100c0d, #321514 48%, #090708) !important;
-  background-attachment: fixed !important;
-  color: #f2d9b0 !important;
+  background-color: #100707 !important;
+  color: #f5d7a0 !important;
   font-family: Georgia, serif !important;
+
+  background-image:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(255, 207, 91, .95) 0%,
+      rgba(255, 102, 20, .75) 13%,
+      rgba(160, 35, 15, .4) 35%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 10% 85%,
+      rgba(255, 75, 15, .7),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 90% 85%,
+      rgba(255, 75, 15, .7),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #10080d 0%,
+      #351014 25%,
+      #76251a 48%,
+      #b9411c 72%,
+      #ff791f 100%
+    ) !important;
+
+  background-attachment: fixed !important;
+  background-size: cover !important;
 }
 
-/* TOP NAVIGATION */
+/* ===== ACACIA TREE SILHOUETTES ===== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background-image:
+    /* Left tree canopy */
+    radial-gradient(ellipse at 3% 25%,
+      #100807 0 7%, transparent 7.5%),
+    radial-gradient(ellipse at 10% 21%,
+      #100807 0 5%, transparent 5.5%),
+    radial-gradient(ellipse at 15% 27%,
+      #100807 0 6%, transparent 6.5%),
+
+    /* Right tree canopy */
+    radial-gradient(ellipse at 87% 23%,
+      #100807 0 6%, transparent 6.5%),
+    radial-gradient(ellipse at 94% 20%,
+      #100807 0 7%, transparent 7.5%),
+    radial-gradient(ellipse at 99% 27%,
+      #100807 0 6%, transparent 6.5%),
+
+    /* Tree trunks */
+    linear-gradient(85deg,
+      transparent 0 5%,
+      #100807 5.5% 7%,
+      transparent 7.5%),
+    linear-gradient(95deg,
+      transparent 0 92%,
+      #100807 92.5% 94%,
+      transparent 94.5%),
+
+    /* Dark ground */
+    linear-gradient(
+      0deg,
+      #100807 0%,
+      transparent 19%
+    );
+
+  background-repeat: no-repeat;
+}
+
+/* ===== GLOWING EMBERS ===== */
+
+body::after {
+  content: "✦  ·  🦁  ·  🦌  ·  🐘  ·  ✦";
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 8px;
+  color: #ffc45d;
+  text-shadow:
+    0 0 8px #ff6b18,
+    0 0 18px #ff3300;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== NAVIGATION ===== */
+
 .topbar {
-  background: linear-gradient(90deg, #170d0d, #63251c, #170d0d) !important;
+  background: linear-gradient(
+    90deg,
+    #170909,
+    #70271b,
+    #170909
+  ) !important;
+
   border-bottom: 3px solid #d18b36 !important;
   color: #ffe0a1 !important;
-  box-shadow: 0 4px 18px #e05b2444 !important;
+
+  box-shadow:
+    0 4px 18px #e05b2444 !important;
 }
 
 .navbar {
-  background: linear-gradient(90deg, #27100f, #4c1b17, #27100f) !important;
-  border: 1px solid #b97832 !important;
-  box-shadow: 0 3px 15px #c45b2833 !important;
+  background: linear-gradient(
+    90deg,
+    #27100f,
+    #63251c,
+    #27100f
+  ) !important;
+
+  border: 1px solid #d18b36 !important;
 }
 
-/* MAIN DEN TITLE */
+/* ===== HEADINGS ===== */
+
 .h1 {
   color: #ffd27b !important;
   font-family: Georgia, serif !important;
-  letter-spacing: 5px !important;
+  letter-spacing: 4px !important;
   text-transform: uppercase !important;
+
   text-shadow:
     0 0 5px #ffb347,
     0 0 12px #e75b22,
-    2px 3px 5px #000000 !important;
+    2px 3px 5px #1c0805 !important;
 }
 
-/* SIDEBAR HEADINGS */
 .h3 {
-  background: linear-gradient(90deg, #35100f, #87351e, #35100f) !important;
+  background: linear-gradient(
+    90deg,
+    #35100f,
+    #87351e,
+    #35100f
+  ) !important;
+
   border: 1px solid #d49a48 !important;
   color: #ffe1a0 !important;
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
+
   text-shadow: 0 0 7px #ff8c32 !important;
-  box-shadow: 0 0 12px #b94c2833 !important;
 }
 
-/* LINKS */
-a:link,
-a:visited {
-  color: #e9b65e !important;
-  transition: color 0.25s, text-shadow 0.25s !important;
-}
+/* ===== MAIN CONTENT ===== */
 
-a:hover {
-  color: #fff0c2 !important;
-  text-shadow: 0 0 8px #ff6b26, 0 0 15px #ff9d3d !important;
-}
-
-/* GENERAL TEXT */
-body, p, td {
-  color: #ead7bd;
-}
-
-/* DECORATIVE SELECTION */
-::selection {
-  background: #a33b25;
-  color: #fff0c2;
-}
-
-/* ===== EMBERFALL: DARK ROYAL INTERIOR ===== */
-
-/* Main page */
 .container.main,
 .main {
   background: #190e0e !important;
   color: #f5d7a0 !important;
+
+  box-shadow:
+    0 0 20px rgba(255, 95, 25, .2),
+    0 0 55px rgba(150, 35, 20, .3) !important;
 }
 
-/* Main content area */
 .col-md-9 {
   background: #241313 !important;
   color: #f5d7a0 !important;
 }
 
-/* Breadcrumb */
+/* ===== BREADCRUMBS ===== */
+
 .breadcrumb {
-  background: linear-gradient(90deg, #351511, #65271b) !important;
+  background: linear-gradient(
+    90deg,
+    #351511,
+    #65271b
+  ) !important;
+
   border: 1px solid #c58b4f !important;
   color: #ffe0a0 !important;
 }
 
-/* General panels */
+/* ===== PANELS ===== */
+
 .panel {
   background: #281313 !important;
   border: 1px solid #bd7738 !important;
   color: #f5d7a0 !important;
 }
 
-/* Table headers */
+/* ===== LION TABLES ===== */
+
 .table .top {
-  background: linear-gradient(90deg, #391511, #8a351d) !important;
+  background: linear-gradient(
+    90deg,
+    #391511,
+    #8a351d
+  ) !important;
+
   color: #ffdc91 !important;
   border-bottom: 2px solid #d69b48 !important;
 }
 
-/* Table bottom bars */
 .table .bottom {
   background: #71351f !important;
   color: #ffe0a0 !important;
 }
 
-/* Lion information boxes */
 .inner-table {
   background: #321817 !important;
   color: #ffe0a0 !important;
@@ -131,106 +236,39 @@ body, p, td {
   color: #ffe2a5 !important;
 }
 
-/* Main stat table */
 tr.right,
 td.right {
   background-color: #3b1d19 !important;
   color: #ffe2a5 !important;
 }
 
-/* Text readability */
+/* ===== TEXT ===== */
+
 .main p,
 .main td,
 .main th {
   color: #f5d7a0 !important;
 }
 
-/* Golden links */
+/* ===== LINKS ===== */
+
 a:link,
 a:visited {
   color: #f3bd64 !important;
+  transition: color .25s, text-shadow .25s !important;
 }
 
 a:hover {
   color: #fff0bd !important;
-  text-shadow: 0 0 10px #ff6b24 !important;
+
+  text-shadow:
+    0 0 8px #ff6b24,
+    0 0 15px #ff9d3d !important;
 }
 
-/* =====================================
-   EMBERFALL KINGDOM
-   THE WILDFIRE SAVANNAH
-   ===================================== */
+/* ===== SELECTION ===== */
 
-/* Dramatic wildfire sky */
-body {
-  background-color: #100909 !important;
-  background-image:
-    radial-gradient(ellipse at 50% 78%,
-      rgba(255, 91, 24, .48) 0%,
-      transparent 35%),
-    radial-gradient(ellipse at 15% 35%,
-      rgba(130, 35, 24, .65) 0%,
-      transparent 40%),
-    radial-gradient(ellipse at 85% 30%,
-      rgba(180, 65, 20, .45) 0%,
-      transparent 40%),
-    linear-gradient(
-      180deg,
-      #160b12 0%,
-      #542018 35%,
-      #a4421d 65%,
-      #21100c 100%
-    ) !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-}
-
-/* Dark forest silhouettes */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: .85;
-
-  background-image:
-    /* Tree canopies */
-    radial-gradient(ellipse at 4% 48%, #100b09 0 9%, transparent 10%),
-    radial-gradient(ellipse at 12% 38%, #160d0b 0 8%, transparent 9%),
-    radial-gradient(ellipse at 96% 42%, #100b09 0 10%, transparent 11%),
-    radial-gradient(ellipse at 88% 34%, #160d0b 0 8%, transparent 9%),
-
-    /* Tree trunks */
-    linear-gradient(85deg, transparent 0 7%, #100b09 7.5% 9%, transparent 9.5%),
-    linear-gradient(95deg, transparent 0 91%, #100b09 91.5% 94%, transparent 94.5%),
-
-    /* Forest floor */
-    linear-gradient(0deg, #100908 0%, transparent 28%);
-
-  background-repeat: no-repeat;
-}
-
-/* Floating embers and wildlife decorations */
-body::after {
-  content: "✦　🦌　✧　🦁　✦　🦌　✧";
-  position: fixed;
-  bottom: 12px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: #ffb34d;
-  font-size: 23px;
-  letter-spacing: 8px;
-  opacity: .8;
-  pointer-events: none;
-  z-index: 0;
-  text-shadow: 0 0 12px #ff5b18;
-}
-
-/* Fiery glow around the kingdom */
-.container.main {
-  box-shadow:
-    0 0 20px rgba(255, 95, 25, .2),
-    0 0 55px rgba(150, 35, 20, .3) !important;
+::selection {
+  background: #a33b25;
+  color: #fff0c2;
 }
