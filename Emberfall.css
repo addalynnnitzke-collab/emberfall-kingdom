@@ -1,96 +1,111 @@
 
 /* ==========================================
    EMBERFALL KINGDOM
-   THE GREAT INFERNO
+   THE INFERNO STORM
    ========================================== */
 
-/* ===== BACKGROUND AND CLOUDS ===== */
+/* ===== THE WILDFIRE SKY ===== */
 
 body {
   background-color: #100609 !important;
+  color: #f5d7a0 !important;
+  font-family: Georgia, serif !important;
+
   background-image:
 
-    /* Thick black smoke clouds */
+    /* Huge black smoke formations */
     radial-gradient(
-      ellipse 55% 23% at 8% 12%,
+      ellipse 48% 20% at 5% 9%,
       #080507 0%,
-      #16090d 48%,
+      #13070b 55%,
       transparent 100%
     ),
 
     radial-gradient(
-      ellipse 48% 25% at 43% 7%,
-      #0b0609 0%,
-      #260c11 55%,
+      ellipse 38% 24% at 31% 4%,
+      #0a0508 0%,
+      #1d080d 58%,
       transparent 100%
     ),
 
     radial-gradient(
-      ellipse 58% 27% at 91% 13%,
+      ellipse 52% 23% at 69% 9%,
+      #090508 0%,
+      #1b080c 55%,
+      transparent 100%
+    ),
+
+    radial-gradient(
+      ellipse 42% 19% at 100% 17%,
       #080507 0%,
-      #200a0e 55%,
+      #21090d 58%,
       transparent 100%
     ),
 
-    /* Burgundy storm clouds */
+    /* Uneven rolling smoke banks */
     radial-gradient(
-      ellipse 60% 25% at 22% 29%,
-      #641b20 0%,
-      rgba(100, 27, 32, .8) 40%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 55% 26% at 78% 32%,
-      #79221c 0%,
-      rgba(121, 34, 28, .75) 45%,
+      ellipse 32% 13% at 18% 24%,
+      #351015 0%,
+      rgba(75, 17, 22, .9) 48%,
       transparent 100%
     ),
 
     radial-gradient(
-      ellipse 70% 22% at 50% 42%,
-      rgba(52, 10, 16, .95) 0%,
+      ellipse 40% 17% at 55% 22%,
+      #4b1117 0%,
+      rgba(91, 20, 25, .85) 48%,
       transparent 100%
     ),
 
-    /* Intense golden firelight */
     radial-gradient(
-      ellipse 65% 35% at 50% 76%,
+      ellipse 34% 14% at 88% 30%,
+      #351015 0%,
+      rgba(93, 24, 23, .8) 48%,
+      transparent 100%
+    ),
+
+    radial-gradient(
+      ellipse 55% 15% at 42% 37%,
+      rgba(42, 10, 16, .95) 0%,
+      transparent 100%
+    ),
+
+    /* Fiery light shining through the smoke */
+    radial-gradient(
+      ellipse 65% 34% at 50% 76%,
       #ffcf55 0%,
-      #ff851c 25%,
-      rgba(226, 55, 14, .8) 55%,
+      #ff871c 23%,
+      rgba(238, 65, 17, .8) 53%,
       transparent 100%
     ),
 
     radial-gradient(
-      ellipse 45% 35% at 5% 88%,
-      rgba(255, 95, 15, .9),
+      ellipse 42% 35% at 4% 88%,
+      rgba(255, 85, 15, .9),
       transparent 100%
     ),
 
     radial-gradient(
-      ellipse 45% 35% at 95% 88%,
-      rgba(255, 95, 15, .9),
+      ellipse 42% 35% at 96% 88%,
+      rgba(255, 85, 15, .9),
       transparent 100%
     ),
 
-    /* Base sky */
+    /* Deep red sky underneath */
     linear-gradient(
       180deg,
       #0b0609 0%,
-      #260d13 25%,
-      #651c1a 48%,
-      #bd391a 72%,
-      #ff761e 100%
+      #260c12 25%,
+      #681b1b 49%,
+      #ba351a 73%,
+      #ff741e 100%
     ) !important;
 
   background-attachment: fixed !important;
   background-size: cover !important;
-  color: #f5d7a0 !important;
-  font-family: Georgia, serif !important;
 }
 
-/* ===== FLOATING FIRE EMBERS ===== */
+/* ===== FLOATING EMBERS ===== */
 
 body::after {
   content: "";
@@ -100,24 +115,27 @@ body::after {
   z-index: 0;
 
   background-image:
-    radial-gradient(circle, #ffd875 1px, transparent 3px),
+    radial-gradient(circle, #ffe08a 1px, transparent 3px),
     radial-gradient(circle, #ff7b24 2px, transparent 4px),
     radial-gradient(circle, #ffad38 1px, transparent 3px),
-    radial-gradient(circle, #e94716 2px, transparent 4px);
+    radial-gradient(circle, #ed4217 2px, transparent 4px),
+    radial-gradient(circle, #fff0ad 1px, transparent 2px);
 
   background-size:
     113px 137px,
     179px 193px,
     223px 167px,
-    257px 211px;
+    257px 211px,
+    307px 251px;
 
   background-position:
     15px 25px,
     75px 95px,
     125px 55px,
-    35px 145px;
+    35px 145px,
+    190px 80px;
 
-  opacity: .65;
+  opacity: .72;
 }
 
 /* ===== NAVIGATION ===== */
@@ -132,7 +150,9 @@ body::after {
 
   border-bottom: 3px solid #d18b36 !important;
   color: #ffe0a1 !important;
-  box-shadow: 0 4px 18px #e05b2444 !important;
+
+  box-shadow:
+    0 4px 18px #e05b2444 !important;
 }
 
 .navbar {
@@ -172,7 +192,9 @@ body::after {
   color: #ffe1a0 !important;
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
-  text-shadow: 0 0 7px #ff8c32 !important;
+
+  text-shadow:
+    0 0 7px #ff8c32 !important;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -270,6 +292,7 @@ a:visited {
 
 a:hover {
   color: #fff0bd !important;
+
   text-shadow:
     0 0 8px #ff6b24,
     0 0 15px #ff9d3d !important;
