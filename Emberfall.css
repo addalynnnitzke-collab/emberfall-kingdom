@@ -72,3 +72,10 @@ body, p, td {
   background: #a33b25;
   color: #fff0c2;
 }
+body {
+  background: #160509 !important;
+}
+
+a {
+  color: #ff4500 !important;
+}
