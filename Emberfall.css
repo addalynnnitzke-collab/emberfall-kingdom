@@ -1,105 +1,96 @@
 
 /* ==========================================
    EMBERFALL KINGDOM
-   THE BURNING SAVANNAH
+   THE GREAT INFERNO
    ========================================== */
 
-/* ===== MAIN BACKGROUND ===== */
+/* ===== BACKGROUND AND CLOUDS ===== */
 
 body {
-  background-color: #100707 !important;
-  color: #f5d7a0 !important;
-  font-family: Georgia, serif !important;
+  background-color: #100609 !important;
+  background-image:
 
+    /* Thick black smoke clouds */
+    radial-gradient(
+      ellipse 55% 23% at 8% 12%,
+      #080507 0%,
+      #16090d 48%,
+      transparent 100%
+    ),
 
-/* ===== EMBERFALL: ROLLING FIRESTORM CLOUDS ===== */
+    radial-gradient(
+      ellipse 48% 25% at 43% 7%,
+      #0b0609 0%,
+      #260c11 55%,
+      transparent 100%
+    ),
 
-background-image:
+    radial-gradient(
+      ellipse 58% 27% at 91% 13%,
+      #080507 0%,
+      #200a0e 55%,
+      transparent 100%
+    ),
 
-  /* Heavy black smoke */
-  radial-gradient(ellipse 42% 20% at 12% 12%,
-    #100709 0%, #210b0e 55%, transparent 100%),
+    /* Burgundy storm clouds */
+    radial-gradient(
+      ellipse 60% 25% at 22% 29%,
+      #641b20 0%,
+      rgba(100, 27, 32, .8) 40%,
+      transparent 100%
+    ),
 
-  radial-gradient(ellipse 38% 18% at 48% 8%,
-    #16090c 0%, #351014 60%, transparent 100%),
+    radial-gradient(
+      ellipse 55% 26% at 78% 32%,
+      #79221c 0%,
+      rgba(121, 34, 28, .75) 45%,
+      transparent 100%
+    ),
 
-  radial-gradient(ellipse 45% 24% at 88% 16%,
-    #100709 0%, #2c0d10 58%, transparent 100%),
+    radial-gradient(
+      ellipse 70% 22% at 50% 42%,
+      rgba(52, 10, 16, .95) 0%,
+      transparent 100%
+    ),
 
-  /* Burgundy smoke banks */
-  radial-gradient(ellipse 48% 22% at 25% 27%,
-    rgba(105, 24, 24, .95) 0%, transparent 100%),
+    /* Intense golden firelight */
+    radial-gradient(
+      ellipse 65% 35% at 50% 76%,
+      #ffcf55 0%,
+      #ff851c 25%,
+      rgba(226, 55, 14, .8) 55%,
+      transparent 100%
+    ),
 
-  radial-gradient(ellipse 50% 24% at 75% 30%,
-    rgba(115, 30, 20, .9) 0%, transparent 100%),
+    radial-gradient(
+      ellipse 45% 35% at 5% 88%,
+      rgba(255, 95, 15, .9),
+      transparent 100%
+    ),
 
-  radial-gradient(ellipse 65% 18% at 50% 42%,
-    rgba(65, 15, 17, .8) 0%, transparent 100%),
+    radial-gradient(
+      ellipse 45% 35% at 95% 88%,
+      rgba(255, 95, 15, .9),
+      transparent 100%
+    ),
 
-  /* Fiery light breaking through */
-  radial-gradient(ellipse 55% 35% at 50% 75%,
-    rgba(255, 177, 49, .95) 0%,
-    rgba(255, 83, 19, .8) 28%,
-    transparent 100%),
-
-  radial-gradient(ellipse at 5% 85%,
-    rgba(255, 70, 15, .8), transparent 50%),
-
-  radial-gradient(ellipse at 95% 85%,
-    rgba(255, 70, 15, .8), transparent 50%),
-
-  /* Base sky */
-  linear-gradient(
-    180deg,
-    #10070b 0%,
-    #351014 30%,
-    #76251a 55%,
-    #d34a1b 80%,
-    #ff8a26 100%
-  ) !important;
-
-background-attachment: fixed !important;
-background-size: cover !important;
-
-  /* Glowing firelight breaking through clouds */
-  radial-gradient(
-    ellipse at 50% 65%,
-    rgba(255, 130, 25, .8) 0%,
-    rgba(220, 55, 15, .5) 30%,
-    transparent 70%
-  ),
-
-  radial-gradient(
-    ellipse at 5% 85%,
-    rgba(255, 75, 15, .8),
-    transparent 45%
-  ),
-
-  radial-gradient(
-    ellipse at 95% 85%,
-    rgba(255, 75, 15, .8),
-    transparent 45%
-  ),
-
-  /* Fiery horizon */
-  linear-gradient(
-    180deg,
-    #10080d 0%,
-    #351014 25%,
-    #852719 55%,
-    #d34a1b 80%,
-    #ff8a26 100%
-  ) !important;
-
-background-attachment: fixed !important;
-background-size: cover !important;
-
+    /* Base sky */
+    linear-gradient(
+      180deg,
+      #0b0609 0%,
+      #260d13 25%,
+      #651c1a 48%,
+      #bd391a 72%,
+      #ff761e 100%
+    ) !important;
 
   background-attachment: fixed !important;
   background-size: cover !important;
+  color: #f5d7a0 !important;
+  font-family: Georgia, serif !important;
 }
 
-/* ===== WILDFIRE EMBERS ===== */
+/* ===== FLOATING FIRE EMBERS ===== */
 
 body::after {
   content: "";
@@ -129,43 +120,6 @@ body::after {
   opacity: .65;
 }
 
-/* ===== INTENSE FIRE GLOW ===== */
-
-body {
-  background-color: #100707 !important;
-
-  background-image:
-    radial-gradient(
-      ellipse at 50% 100%,
-      #ffcc57 0%,
-      #ff741e 12%,
-      rgba(190, 40, 15, .8) 30%,
-      transparent 65%
-    ),
-    radial-gradient(
-      ellipse at 10% 85%,
-      rgba(255, 75, 15, .8),
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse at 90% 85%,
-      rgba(255, 75, 15, .8),
-      transparent 45%
-    ),
-    linear-gradient(
-      180deg,
-      #0c070b 0%,
-      #351014 25%,
-      #852719 55%,
-      #d34a1b 80%,
-      #ff8a26 100%
-    ) !important;
-
-  background-attachment: fixed !important;
-  background-size: cover !important;
-}
-
-
 /* ===== NAVIGATION ===== */
 
 .topbar {
@@ -178,9 +132,7 @@ body {
 
   border-bottom: 3px solid #d18b36 !important;
   color: #ffe0a1 !important;
-
-  box-shadow:
-    0 4px 18px #e05b2444 !important;
+  box-shadow: 0 4px 18px #e05b2444 !important;
 }
 
 .navbar {
@@ -220,7 +172,6 @@ body {
   color: #ffe1a0 !important;
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
-
   text-shadow: 0 0 7px #ff8c32 !important;
 }
 
@@ -319,13 +270,12 @@ a:visited {
 
 a:hover {
   color: #fff0bd !important;
-
   text-shadow:
     0 0 8px #ff6b24,
     0 0 15px #ff9d3d !important;
 }
 
-/* ===== SELECTION ===== */
+/* ===== TEXT SELECTION ===== */
 
 ::selection {
   background: #a33b25;
