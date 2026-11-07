@@ -1,10 +1,10 @@
 
 /* ==========================================
    EMBERFALL KINGDOM
-   THE INFERNO STORM
+   BURNING SKIES
    ========================================== */
 
-/* ===== THE WILDFIRE SKY ===== */
+/* ===== MAIN BACKGROUND ===== */
 
 body {
   background-color: #100609 !important;
@@ -12,114 +12,119 @@ body {
   font-family: Georgia, serif !important;
 
   background-image:
-
-    /* Huge black smoke formations */
-    radial-gradient(
-      ellipse 48% 20% at 5% 9%,
-      #080507 0%,
-      #13070b 55%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 38% 24% at 31% 4%,
-      #0a0508 0%,
-      #1d080d 58%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 52% 23% at 69% 9%,
-      #090508 0%,
-      #1b080c 55%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 42% 19% at 100% 17%,
-      #080507 0%,
-      #21090d 58%,
-      transparent 100%
-    ),
-
-    /* Uneven rolling smoke banks */
-    radial-gradient(
-      ellipse 32% 13% at 18% 24%,
-      #351015 0%,
-      rgba(75, 17, 22, .9) 48%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 40% 17% at 55% 22%,
-      #4b1117 0%,
-      rgba(91, 20, 25, .85) 48%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 34% 14% at 88% 30%,
-      #351015 0%,
-      rgba(93, 24, 23, .8) 48%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 55% 15% at 42% 37%,
-      rgba(42, 10, 16, .95) 0%,
-      transparent 100%
-    ),
-
-    /* Fiery light shining through the smoke */
-    radial-gradient(
-      ellipse 65% 34% at 50% 76%,
-      #ffcf55 0%,
-      #ff871c 23%,
-      rgba(238, 65, 17, .8) 53%,
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 42% 35% at 4% 88%,
-      rgba(255, 85, 15, .9),
-      transparent 100%
-    ),
-
-    radial-gradient(
-      ellipse 42% 35% at 96% 88%,
-      rgba(255, 85, 15, .9),
-      transparent 100%
-    ),
-
-    /* Deep red sky underneath */
+    /* Deep black upper sky */
     linear-gradient(
       180deg,
-      #0b0609 0%,
-      #260c12 25%,
-      #681b1b 49%,
-      #ba351a 73%,
-      #ff741e 100%
+      #090508 0%,
+      #17090e 20%,
+      #48151a 44%,
+      #a52b1b 67%,
+      #f15a18 88%,
+      #ff9b32 100%
+    ),
+
+    /* Bright fire glow */
+    radial-gradient(
+      ellipse at 50% 90%,
+      #ffdc68 0%,
+      #ff8a20 28%,
+      transparent 70%
     ) !important;
 
   background-attachment: fixed !important;
   background-size: cover !important;
 }
 
-/* ===== FLOATING EMBERS ===== */
+/* ===== MOVING SMOKE FORMATIONS ===== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 75%;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+
+    /* Large uneven smoke banks */
+    radial-gradient(
+      ellipse 20% 18% at 3% 25%,
+      #080507 0 48%,
+      transparent 75%
+    ),
+
+    radial-gradient(
+      ellipse 24% 22% at 17% 18%,
+      #0b0609 0 48%,
+      transparent 76%
+    ),
+
+    radial-gradient(
+      ellipse 18% 16% at 34% 27%,
+      #100609 0 48%,
+      transparent 76%
+    ),
+
+    radial-gradient(
+      ellipse 26% 20% at 55% 16%,
+      #080507 0 48%,
+      transparent 76%
+    ),
+
+    radial-gradient(
+      ellipse 21% 19% at 76% 24%,
+      #0c0609 0 48%,
+      transparent 76%
+    ),
+
+    radial-gradient(
+      ellipse 25% 21% at 98% 17%,
+      #080507 0 48%,
+      transparent 76%
+    ),
+
+    /* Lower rolling smoke */
+    radial-gradient(
+      ellipse 30% 17% at 9% 57%,
+      #19090d 0 45%,
+      transparent 78%
+    ),
+
+    radial-gradient(
+      ellipse 34% 19% at 42% 52%,
+      #260d12 0 45%,
+      transparent 78%
+    ),
+
+    radial-gradient(
+      ellipse 30% 18% at 83% 58%,
+      #19090d 0 45%,
+      transparent 78%
+    );
+
+  background-repeat: no-repeat;
+  filter: blur(7px);
+  opacity: .95;
+
+  animation: smokeDrift 18s ease-in-out infinite alternate;
+}
+
+/* ===== FLOATING FIRE EMBERS ===== */
 
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 
   background-image:
-    radial-gradient(circle, #ffe08a 1px, transparent 3px),
-    radial-gradient(circle, #ff7b24 2px, transparent 4px),
-    radial-gradient(circle, #ffad38 1px, transparent 3px),
-    radial-gradient(circle, #ed4217 2px, transparent 4px),
-    radial-gradient(circle, #fff0ad 1px, transparent 2px);
+    radial-gradient(circle, #fff0a8 1px, transparent 3px),
+    radial-gradient(circle, #ff8b2b 2px, transparent 5px),
+    radial-gradient(circle, #ffb13d 2px, transparent 4px),
+    radial-gradient(circle, #e94116 3px, transparent 6px),
+    radial-gradient(circle, #ffd16a 1px, transparent 2px);
 
   background-size:
     113px 137px,
@@ -135,7 +140,47 @@ body::after {
     35px 145px,
     190px 80px;
 
-  opacity: .72;
+  opacity: .75;
+  animation: emberFlicker 3s ease-in-out infinite alternate;
+}
+
+/* ===== SMOKE MOVEMENT ===== */
+
+@keyframes smokeDrift {
+  0% {
+    transform: translateX(-1.5%) translateY(0);
+    opacity: .78;
+  }
+
+  50% {
+    opacity: .96;
+  }
+
+  100% {
+    transform: translateX(1.5%) translateY(2%);
+    opacity: .85;
+  }
+}
+
+/* ===== EMBER FLICKER ===== */
+
+@keyframes emberFlicker {
+  0% {
+    opacity: .45;
+  }
+
+  100% {
+    opacity: .85;
+  }
+}
+
+/* ===== KEEP CONTENT ABOVE BACKGROUND ===== */
+
+.container,
+.container.main,
+.main {
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== NAVIGATION ===== */
@@ -151,8 +196,7 @@ body::after {
   border-bottom: 3px solid #d18b36 !important;
   color: #ffe0a1 !important;
 
-  box-shadow:
-    0 4px 18px #e05b2444 !important;
+  box-shadow: 0 4px 18px #e05b2444 !important;
 }
 
 .navbar {
@@ -193,8 +237,7 @@ body::after {
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
 
-  text-shadow:
-    0 0 7px #ff8c32 !important;
+  text-shadow: 0 0 7px #ff8c32 !important;
 }
 
 /* ===== MAIN CONTENT ===== */
