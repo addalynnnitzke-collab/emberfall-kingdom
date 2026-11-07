@@ -1,46 +1,74 @@
 
-/* EMBERFALL KINGDOM */
+/* =================================
+   EMBERFALL KINGDOM
+   THE REALM OF THE BURNING SUN
+   ================================= */
 
 body {
-  background: linear-gradient(
-    180deg,
-    #30231e 0%,
-    #80513a 50%,
-    #241b18 100%
-  ) !important;
+  background:
+    radial-gradient(ellipse at top, #762d20 0%, transparent 48%),
+    linear-gradient(145deg, #100c0d, #321514 48%, #090708) !important;
   background-attachment: fixed !important;
-  color: #ead9bd !important;
+  color: #f2d9b0 !important;
   font-family: Georgia, serif !important;
 }
 
+/* TOP NAVIGATION */
 .topbar {
-  background: #30231e !important;
-  border-bottom: 2px solid #c58b4f !important;
-  color: #f0d39b !important;
+  background: linear-gradient(90deg, #170d0d, #63251c, #170d0d) !important;
+  border-bottom: 3px solid #d18b36 !important;
+  color: #ffe0a1 !important;
+  box-shadow: 0 4px 18px #e05b2444 !important;
 }
 
 .navbar {
-  background: #513629 !important;
-  border: 1px solid #c58b4f !important;
+  background: linear-gradient(90deg, #27100f, #4c1b17, #27100f) !important;
+  border: 1px solid #b97832 !important;
+  box-shadow: 0 3px 15px #c45b2833 !important;
 }
 
+/* MAIN DEN TITLE */
 .h1 {
-  color: #e5bc78 !important;
-  letter-spacing: 2px !important;
-  text-shadow: 1px 2px 4px #1c1411 !important;
+  color: #ffd27b !important;
+  font-family: Georgia, serif !important;
+  letter-spacing: 5px !important;
+  text-transform: uppercase !important;
+  text-shadow:
+    0 0 5px #ffb347,
+    0 0 12px #e75b22,
+    2px 3px 5px #000000 !important;
 }
 
+/* SIDEBAR HEADINGS */
 .h3 {
-  background: #80513a !important;
-  border: 1px solid #c58b4f !important;
-  color: #ffe4b0 !important;
+  background: linear-gradient(90deg, #35100f, #87351e, #35100f) !important;
+  border: 1px solid #d49a48 !important;
+  color: #ffe1a0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  text-shadow: 0 0 7px #ff8c32 !important;
+  box-shadow: 0 0 12px #b94c2833 !important;
 }
 
+/* LINKS */
 a:link,
 a:visited {
-  color: #e5bc78 !important;
+  color: #e9b65e !important;
+  transition: color 0.25s, text-shadow 0.25s !important;
 }
 
 a:hover {
-  color: #fff0cf !important;
+  color: #fff0c2 !important;
+  text-shadow: 0 0 8px #ff6b26, 0 0 15px #ff9d3d !important;
+}
+
+/* GENERAL TEXT */
+body, p, td {
+  color: #ead7bd;
+}
+
+/* DECORATIVE SELECTION */
+::selection {
+  background: #a33b25;
+  color: #fff0c2;
 }
