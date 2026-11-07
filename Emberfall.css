@@ -300,6 +300,109 @@ td.right {
   border-color: #f0ae4e !important;
 }
 
+/* ===== BEETLE MOUND CARDS ===== */
+
+.mound-grid {
+  background: #281313 !important;
+  background-color: #281313 !important;
+  border: 1px solid #bd7738 !important;
+  border-radius: 6px !important;
+  color: #ffe0a0 !important;
+
+  box-shadow:
+    0 0 8px rgba(255, 125, 35, .15) !important;
+}
+
+.mound-grid:hover {
+  background: #54231b !important;
+  background-color: #54231b !important;
+  border-color: #f0ae4e !important;
+}
+
+.mound-grid a {
+  color: #ffd27b !important;
+}
+
+.mound-grid img {
+  border-color: #bd7738 !important;
+}
+
+a:has(.mound-grid) {
+  color: #ffd27b !important;
+}
+
+/* ===== PROGRESS BAR TRACKS ===== */
+
+.progress {
+  background: #160b0c !important;
+  border: 1px solid #bd7738 !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 0 5px #080405 !important;
+}
+
+/* Text inside progress bars */
+
+.progress div {
+  color: #fff0cf !important;
+  text-shadow: 1px 1px 2px #1b0805 !important;
+}
+
+/* ===== ENERGY BAR ===== */
+
+.progress-bar-warning {
+  background: linear-gradient(
+    180deg,
+    #ffe18a 0%,
+    #e8ad42 45%,
+    #bd7425 100%
+  ) !important;
+}
+
+/* ===== HUNGER / FOOD BAR ===== */
+
+.progress-bar-danger {
+  background: linear-gradient(
+    180deg,
+    #e85c49 0%,
+    #b52b24 50%,
+    #741b20 100%
+  ) !important;
+}
+
+/* ===== EXPERIENCE BAR ===== */
+
+.progress-bar-success {
+  background: linear-gradient(
+    180deg,
+    #dfb36f 0%,
+    #b77b3b 50%,
+    #79502b 100%
+  ) !important;
+}
+
+/* ===== IMPRESSION BAR ===== */
+
+.progress-bar {
+  background: linear-gradient(
+    180deg,
+    #d58aa0 0%,
+    #a64b70 50%,
+    #713047 100%
+  ) !important;
+}
+
+/* ===== HEALTH BAR ===== */
+
+.progress-bar-info {
+  background: linear-gradient(
+    180deg,
+    #e45a4c 0%,
+    #b52b24 50%,
+    #71171d 100%
+  ) !important;
+}
+
 /* ===== CHATBOX OUTER BACKGROUND ===== */
 
 #fra_chatContainer,
@@ -334,13 +437,9 @@ td.right {
   border: 1px solid #d69b48 !important;
 }
 
-/* Chat timestamps */
-
 .s-chat-message_timestamp {
   color: #d8a66b !important;
 }
-
-/* Chat message links */
 
 .s-chat-message a {
   color: #ffbd63 !important;
@@ -350,15 +449,11 @@ td.right {
   color: #fff0bd !important;
 }
 
-/* Chat message names and text */
-
 .s-chat-message,
 .s-chat-message p,
 .s-chat-message span {
   color: #ffe2b0 !important;
 }
-
-/* Giveaway claims */
 
 .s-chat-message_claim {
   background: #492016 !important;
@@ -386,8 +481,6 @@ button#label_currentChannel {
   color: #fff0bd !important;
 }
 
-/* Chat channel dropdown */
-
 .s-chat-sidebar #fraChatChannelMenu {
   background: #241112 !important;
   border: 1px solid #bd7738 !important;
@@ -414,8 +507,6 @@ input[type="submit"]:hover {
   color: #fff4d4 !important;
   border-color: #ffd27b !important;
 }
-
-/* Chat controls: dropdown, settings, refresh */
 
 #fra_chatContainer button,
 #fra_chatContainer select {
